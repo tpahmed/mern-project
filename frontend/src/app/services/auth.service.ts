@@ -21,7 +21,7 @@ interface AuthResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:5000/api/auth';
+  private apiUrl = 'http://45.149.207.90:5000/api/auth';
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
   private tokenKey = 'auth_token';
@@ -48,6 +48,7 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}/register`, userData)
       .pipe(
         tap(response => {
+          console.log('Registration response:', response);
           if (response.success && response.token) {
             this.storeToken(response.token);
             this.currentUserSubject.next(response.user);

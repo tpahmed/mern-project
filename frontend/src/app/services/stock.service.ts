@@ -40,7 +40,7 @@ export interface StockMovement {
   providedIn: 'root'
 })
 export class StockService {
-  private apiUrl = 'http://localhost:5000/api/stocks';
+  private apiUrl = 'http://45.149.207.90:5000/api/stocks';
 
   constructor(private http: HttpClient) { }
 

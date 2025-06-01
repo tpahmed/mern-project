@@ -24,7 +24,7 @@ export interface CategoriesResponse {
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl = 'http://localhost:5000/api/categories';
+  private apiUrl = 'http://45.149.207.90:5000/api/categories';
 
   constructor(private http: HttpClient) { }
 

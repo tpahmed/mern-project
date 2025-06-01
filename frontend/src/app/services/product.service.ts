@@ -30,7 +30,7 @@ export interface ProductsResponse {
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:5000/api/products';
+  private apiUrl = 'http://45.149.207.90:5000/api/products';
 
   constructor(private http: HttpClient) { }
 

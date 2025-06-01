@@ -45,7 +45,7 @@ import { MatCardModule } from '@angular/material/card';
 
             <div class="button-container">
               <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid || isLoading">
-                {{ isLoading ? 'Connexion en cours...' : 'Se connecter' }}
+                {{ getButtonText() }}
               </button>
             </div>
           </form>
@@ -97,6 +97,10 @@ export class LoginComponent {
     });
 
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  getButtonText(): string {
+    return this.isLoading ? 'Connexion en cours...' : 'Se connecter';
   }
 
   onSubmit(): void {

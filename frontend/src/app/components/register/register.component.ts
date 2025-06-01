@@ -55,7 +55,7 @@ import { MatCardModule } from '@angular/material/card';
 
             <div class="button-container">
               <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid || isLoading">
-                {{ isLoading ? 'Inscription en cours...' : 'S\'inscrire' }}
+                {{ getButtonText() }}
               </button>
             </div>
           </form>
@@ -105,7 +105,9 @@ export class RegisterComponent {
       motDePasse: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
-
+  getButtonText(): string {
+    return this.isLoading ? 'Inscription en cours...' : "S'inscrire";
+  }
   onSubmit(): void {
     if (this.registerForm.invalid) {
       return;
