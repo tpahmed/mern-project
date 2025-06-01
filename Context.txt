@@ -1,0 +1,18 @@
+Atelier : Développement d'une Application de Gestion de Stock MEAN STACK
+
+Objectif :
+Créer une application web de gestion de stock utilisant MongoDB pour la base de données,
+Express.js pour le backend, et Angular pour le frontend. Cette application permettra de gérer les
+produits, les niveaux de stock, les mouvements d'entrée et de sortie, ainsi que de générer des
+rapports sur l'état des stocks.
+
+Tâches à réaliser :
+1. Concevoir un diagramme de classes pour modéliser le système de gestion de stock.
+2. Implémenter les collections nécessaires (produits, stock, etc.) dans MongoDB.
+3. Développer les API REST pour les opérations CRUD sur les entités "Produit" et "Stock"
+avec Express.js.
+4. Sécuriser l'accès aux API REST en implémentant un mécanisme d'authentification basé sur
+JWT.
+5. Créer l’application SPA Angular avec les interfaces graphiques.
+6. Déployer le projet sur GitHub avec un rapport succinct décrivant l'application et son
+fonctionnement.
